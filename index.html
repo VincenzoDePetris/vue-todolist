@@ -34,7 +34,15 @@
         :class="(toDo[index].done == true) ? 'sbarrato' : ''"
       >
         <p>{{ toDo[index].text }}</p>
-        <p>{{ toDo[index].done }}</p>
+        <div>
+          <button
+            type="button"
+            class="btn btn-danger"
+            v-on:click="rimuove(index)"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
       </div>
     </div>
   </body>

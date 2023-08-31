@@ -19,5 +19,9 @@ createApp({
       ],
     };
   },
-  methods: {},
+  methods: {
+    rimuove(index) {
+      this.toDo.splice(index, 1);
+    },
+  },
 }).mount("#app");
