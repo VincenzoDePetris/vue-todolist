@@ -29,7 +29,7 @@
     <div id="app" class="container">
       <h1>TO DO</h1>
       <!-- sezione di interazione con l'utente -->
-      <div class="input-section">
+      <div class="input-section" @keyup.enter="addMyText()">
         <input
           class="form-control mb-4"
           type="text"
