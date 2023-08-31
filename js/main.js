@@ -17,14 +17,21 @@ createApp({
           done: true,
         },
       ],
+      newTask: {
+        text: "",
+        done: false,
+      },
     };
   },
   methods: {
     rimuove(index) {
       this.toDo.splice(index, 1);
     },
-    addMyText(myText) {
-      this.toDo.unshift(myText);
+
+    addMyText() {
+      const newCopyTask = { ...this.newTask };
+      this.toDo.unshift(newCopyTask);
+      this.newTask.text = "";
     },
   },
 }).mount("#app");
