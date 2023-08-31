@@ -25,5 +25,17 @@
     <!-- VUE JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div id="app" class="container">
+      <h1>TO DO</h1>
+      <div
+        class="item d-flex justify-content-between"
+        v-for="(action, index) in toDo"
+        :class="(toDo[index].done == true) ? 'sbarrato' : ''"
+      >
+        <p>{{ toDo[index].text }}</p>
+        <p>{{ toDo[index].done }}</p>
+      </div>
+    </div>
+  </body>
 </html>
