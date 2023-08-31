@@ -28,6 +28,21 @@
   <body>
     <div id="app" class="container">
       <h1>TO DO</h1>
+      <!-- sezione di interazione con l'utente -->
+      <div class="input-section">
+        <input
+          class="form-control mb-4"
+          type="text"
+          v-model="myText"
+          placeholder="Aggiungi attività alla lista"
+          aria-label="default input example"
+        />
+        <!-- bottone per mandare i dati all'array e aggiungere un item -->
+        <button type="button" class="btn btn-success" @:click="addMyText()">
+          Aggiungi
+        </button>
+      </div>
+      <!-- sezione che crea un item per ogni oggetto dell'array -->
       <div
         class="item d-flex justify-content-between"
         v-for="(action, index) in toDo"
@@ -35,6 +50,7 @@
       >
         <p>{{ toDo[index].text }}</p>
         <div>
+          <!-- bottone che rimuove l'elemento dall'array e di conseguenza dallo schermo -->
           <button
             type="button"
             class="btn btn-danger"

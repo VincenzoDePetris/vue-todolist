@@ -5,3 +5,17 @@
 .sbarrato {
   text-decoration: line-through;
 }
+
+.input-section {
+  display: flex;
+}
+
+.input-section input {
+  width: 90%;
+}
+
+.input-section button {
+  width: 10%;
+  height: 38px;
+  margin-left: 5px;
+}

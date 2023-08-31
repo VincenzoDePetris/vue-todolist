@@ -23,5 +23,8 @@ createApp({
     rimuove(index) {
       this.toDo.splice(index, 1);
     },
+    addMyText(myText) {
+      this.toDo.unshift(myText);
+    },
   },
 }).mount("#app");
